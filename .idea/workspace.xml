@@ -5,8 +5,8 @@
       <config projectName="tutorial" targetName="ExperimentalBuild" />
       <config projectName="tutorial" targetName="NightlyMemCheck" />
       <config projectName="tutorial" targetName="NightlyCoverage" />
-      <config projectName="tutorial" targetName="ExperimentalConfigure" />
       <config projectName="tutorial" targetName="sock_client" />
+      <config projectName="tutorial" targetName="ExperimentalConfigure" />
       <config projectName="tutorial" targetName="ContinuousCoverage" />
       <config projectName="tutorial" targetName="NightlySubmit" />
       <config projectName="tutorial" targetName="ContinuousMemCheck" />
@@ -14,6 +14,7 @@
       <config projectName="tutorial" targetName="ContinuousUpdate" />
       <config projectName="tutorial" targetName="ContinuousStart" />
       <config projectName="tutorial" targetName="mq_producer" />
+      <config projectName="tutorial" targetName="tcp_server" />
       <config projectName="tutorial" targetName="ContinuousSubmit" />
       <config projectName="tutorial" targetName="ContinuousTest" />
       <config projectName="tutorial" targetName="Continuous" />
@@ -26,13 +27,14 @@
       <config projectName="tutorial" targetName="mq_consumer" />
       <config projectName="tutorial" targetName="NightlyUpdate" />
       <config projectName="tutorial" targetName="NightlyStart" />
+      <config projectName="tutorial" targetName="tcp_client" />
       <config projectName="tutorial" targetName="ExperimentalUpdate" />
       <config projectName="tutorial" targetName="NightlyBuild" />
       <config projectName="tutorial" targetName="NightlyConfigure" />
       <config projectName="tutorial" targetName="ContinuousBuild" />
       <config projectName="tutorial" targetName="NightlyTest" />
-      <config projectName="tutorial" targetName="ExperimentalTest" />
       <config projectName="tutorial" targetName="ExperimentalSubmit" />
+      <config projectName="tutorial" targetName="ExperimentalTest" />
       <config projectName="tutorial" targetName="sock_server" />
     </generated>
   </component>
@@ -42,20 +44,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="implement unix socket, message queue">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/wangdm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/linux-tutorial.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ipc/mq_consumer.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ipc/sock_client.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ipc/sock_server.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/libuv/tcp_client.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libuv/tcp_server.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,9 +71,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libuv" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libuv" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ipc" />
     </key>
@@ -97,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.sock_client">
+  <component name="RunManager" selected="CMake Application.tcp_client">
     <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -258,6 +254,16 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="tcp_client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="tcp_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="tcp_client">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tcp_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="tcp_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="tcp_server">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="CMake Application.Continuous" />
       <item itemvalue="CMake Application.ContinuousBuild" />
@@ -291,6 +297,8 @@
       <item itemvalue="CMake Application.NightlyUpdate" />
       <item itemvalue="CMake Application.sock_client" />
       <item itemvalue="CMake Application.sock_server" />
+      <item itemvalue="CMake Application.tcp_client" />
+      <item itemvalue="CMake Application.tcp_server" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -304,7 +312,8 @@
       <option name="presentableId" value="Default" />
       <updated>1565054529982</updated>
       <workItem from="1565054532027" duration="14161000" />
-      <workItem from="1565078604570" duration="6270000" />
+      <workItem from="1565078604570" duration="8920000" />
+      <workItem from="1565091226235" duration="9524000" />
     </task>
     <task id="LOCAL-00001" summary="implement unix socket, message queue">
       <created>1565084819448</created>
@@ -313,7 +322,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565084819448</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implement unix socket, message queue">
+      <created>1565084987597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565084987597</updated>
+    </task>
+    <task id="LOCAL-00003" summary="implement unix socket, message queue">
+      <created>1565085038402</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565085038402</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
