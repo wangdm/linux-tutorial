@@ -9,6 +9,10 @@ link_directories(${PROJECT_SOURCE_DIR}/library/)
 
 set(mq_lib rt pthread)
 
+#semaphore
+add_executable(semaphore ipc/semaphore.c)
+target_link_libraries(semaphore ${mq_lib})
+
 #mq
 add_executable(mq_consumer ipc/mq_consumer.c)
 target_link_libraries(mq_consumer ${mq_lib})
