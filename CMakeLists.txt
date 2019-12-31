@@ -4,6 +4,9 @@ project(tutorial VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
+include_directories(${PROJECT_SOURCE_DIR}/include/)
+link_directories(${PROJECT_SOURCE_DIR}/library/)
+
 set(mq_lib rt pthread)
 
 #mq
@@ -22,14 +25,10 @@ target_link_libraries(sock_server ${mq_lib})
 
 #libuv
 add_executable(tcp_server libuv/tcp_server.c)
-target_include_directories(tcp_server PUBLIC "/home/wangdm/commonlib/include")
-target_link_directories(tcp_server PUBLIC "/home/wangdm/commonlib/lib")
-target_link_libraries(tcp_server uv)
+target_link_libraries(tcp_server uv pthread)
 
 add_executable(tcp_client libuv/tcp_client.c)
-target_include_directories(tcp_client PUBLIC "/home/wangdm/commonlib/include")
-target_link_directories(tcp_client PUBLIC "/home/wangdm/commonlib/lib")
-target_link_libraries(tcp_client uv)
+target_link_libraries(tcp_client uv pthread)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
