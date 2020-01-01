@@ -27,6 +27,13 @@ target_link_libraries(sock_client ${mq_lib})
 add_executable(sock_server ipc/sock_server.c)
 target_link_libraries(sock_server ${mq_lib})
 
+#dbus
+add_executable(dbus_sender dbus/sender.c)
+target_link_libraries(dbus_sender dbus pthread)
+
+add_executable(dbus_receiver dbus/receiver.c)
+target_link_libraries(dbus_receiver dbus pthread)
+
 #libuv
 add_executable(tcp_server libuv/tcp_server.c)
 target_link_libraries(tcp_server uv pthread)
