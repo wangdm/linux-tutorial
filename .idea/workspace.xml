@@ -12,6 +12,7 @@
       <config projectName="tutorial" targetName="ContinuousMemCheck" />
       <config projectName="tutorial" targetName="ExperimentalStart" />
       <config projectName="tutorial" targetName="ContinuousUpdate" />
+      <config projectName="tutorial" targetName="dbus_receiver" />
       <config projectName="tutorial" targetName="ContinuousStart" />
       <config projectName="tutorial" targetName="mq_producer" />
       <config projectName="tutorial" targetName="tcp_server" />
@@ -26,6 +27,7 @@
       <config projectName="tutorial" targetName="Nightly" />
       <config projectName="tutorial" targetName="mq_consumer" />
       <config projectName="tutorial" targetName="NightlyUpdate" />
+      <config projectName="tutorial" targetName="dbus_sender" />
       <config projectName="tutorial" targetName="NightlyStart" />
       <config projectName="tutorial" targetName="tcp_client" />
       <config projectName="tutorial" targetName="ExperimentalUpdate" />
@@ -35,6 +37,7 @@
       <config projectName="tutorial" targetName="NightlyTest" />
       <config projectName="tutorial" targetName="ExperimentalSubmit" />
       <config projectName="tutorial" targetName="ExperimentalTest" />
+      <config projectName="tutorial" targetName="semaphore" />
       <config projectName="tutorial" targetName="sock_server" />
     </generated>
   </component>
@@ -44,11 +47,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libuv/tcp_client.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libuv/tcp_server.c" afterDir="false" />
+    <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="add unamed semaphore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbus/receiver.c" beforeDir="false" afterPath="$PROJECT_DIR$/dbus/receiver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbus/sender.c" beforeDir="false" afterPath="$PROJECT_DIR$/dbus/sender.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,10 +73,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libuv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/library" />
       <recent name="$PROJECT_DIR$/libuv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -93,7 +97,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.tcp_client">
+  <component name="RunManager" selected="CMake Application.dbus_receiver">
     <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -234,12 +238,27 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="dbus_receiver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="dbus_receiver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="dbus_receiver">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dbus_sender" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="dbus_sender" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="dbus_sender">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mq_consumer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="mq_consumer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="mq_consumer">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="mq_producer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="mq_producer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="mq_producer">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="semaphore" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="semaphore" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="semaphore">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -274,6 +293,8 @@
       <item itemvalue="CMake Application.ContinuousSubmit" />
       <item itemvalue="CMake Application.ContinuousTest" />
       <item itemvalue="CMake Application.ContinuousUpdate" />
+      <item itemvalue="CMake Application.dbus_receiver" />
+      <item itemvalue="CMake Application.dbus_sender" />
       <item itemvalue="CMake Application.Experimental" />
       <item itemvalue="CMake Application.ExperimentalBuild" />
       <item itemvalue="CMake Application.ExperimentalConfigure" />
@@ -295,6 +316,7 @@
       <item itemvalue="CMake Application.NightlySubmit" />
       <item itemvalue="CMake Application.NightlyTest" />
       <item itemvalue="CMake Application.NightlyUpdate" />
+      <item itemvalue="CMake Application.semaphore" />
       <item itemvalue="CMake Application.sock_client" />
       <item itemvalue="CMake Application.sock_server" />
       <item itemvalue="CMake Application.tcp_client" />
@@ -314,6 +336,8 @@
       <workItem from="1565054532027" duration="14161000" />
       <workItem from="1565078604570" duration="8920000" />
       <workItem from="1565091226235" duration="9524000" />
+      <workItem from="1577782254998" duration="3426000" />
+      <workItem from="1577866869962" duration="13862000" />
     </task>
     <task id="LOCAL-00001" summary="implement unix socket, message queue">
       <created>1565084819448</created>
@@ -336,7 +360,28 @@
       <option name="project" value="LOCAL" />
       <updated>1565085038402</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add libuv include file and library to project">
+      <created>1577785403379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577785403379</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add unamed semaphore">
+      <created>1577785454783</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577785454783</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add dbus tutorial">
+      <created>1577873736903</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577873736903</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +401,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="implement unix socket, message queue" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement unix socket, message queue" />
+    <MESSAGE value="add libuv include file and library to project" />
+    <MESSAGE value="add unamed semaphore" />
+    <MESSAGE value="add dbus tutorial" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dbus tutorial" />
   </component>
 </project>
