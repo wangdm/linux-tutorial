@@ -2,43 +2,43 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="tutorial" targetName="ExperimentalBuild" />
-      <config projectName="tutorial" targetName="NightlyMemCheck" />
-      <config projectName="tutorial" targetName="NightlyCoverage" />
-      <config projectName="tutorial" targetName="sock_client" />
-      <config projectName="tutorial" targetName="ExperimentalConfigure" />
-      <config projectName="tutorial" targetName="ContinuousCoverage" />
-      <config projectName="tutorial" targetName="NightlySubmit" />
-      <config projectName="tutorial" targetName="ContinuousMemCheck" />
-      <config projectName="tutorial" targetName="ExperimentalStart" />
-      <config projectName="tutorial" targetName="ContinuousUpdate" />
-      <config projectName="tutorial" targetName="dbus_receiver" />
-      <config projectName="tutorial" targetName="ContinuousStart" />
-      <config projectName="tutorial" targetName="mq_producer" />
-      <config projectName="tutorial" targetName="tcp_server" />
-      <config projectName="tutorial" targetName="ContinuousSubmit" />
       <config projectName="tutorial" targetName="ContinuousTest" />
-      <config projectName="tutorial" targetName="Continuous" />
-      <config projectName="tutorial" targetName="ContinuousConfigure" />
-      <config projectName="tutorial" targetName="ExperimentalMemCheck" />
-      <config projectName="tutorial" targetName="NightlyMemoryCheck" />
-      <config projectName="tutorial" targetName="ExperimentalCoverage" />
-      <config projectName="tutorial" targetName="Experimental" />
-      <config projectName="tutorial" targetName="Nightly" />
-      <config projectName="tutorial" targetName="mq_consumer" />
-      <config projectName="tutorial" targetName="NightlyUpdate" />
-      <config projectName="tutorial" targetName="dbus_sender" />
       <config projectName="tutorial" targetName="NightlyStart" />
-      <config projectName="tutorial" targetName="tcp_client" />
-      <config projectName="tutorial" targetName="ExperimentalUpdate" />
-      <config projectName="tutorial" targetName="NightlyBuild" />
+      <config projectName="tutorial" targetName="ContinuousConfigure" />
+      <config projectName="tutorial" targetName="NightlyUpdate" />
       <config projectName="tutorial" targetName="NightlyConfigure" />
-      <config projectName="tutorial" targetName="ContinuousBuild" />
-      <config projectName="tutorial" targetName="NightlyTest" />
-      <config projectName="tutorial" targetName="ExperimentalSubmit" />
+      <config projectName="tutorial" targetName="tcp_client" />
+      <config projectName="tutorial" targetName="ContinuousStart" />
+      <config projectName="tutorial" targetName="ExperimentalCoverage" />
+      <config projectName="tutorial" targetName="ExperimentalUpdate" />
+      <config projectName="tutorial" targetName="Continuous" />
+      <config projectName="tutorial" targetName="sock_client" />
+      <config projectName="tutorial" targetName="NightlySubmit" />
+      <config projectName="tutorial" targetName="ContinuousCoverage" />
+      <config projectName="tutorial" targetName="Experimental" />
       <config projectName="tutorial" targetName="ExperimentalTest" />
+      <config projectName="tutorial" targetName="Nightly" />
+      <config projectName="tutorial" targetName="dbus_sender" />
+      <config projectName="tutorial" targetName="ExperimentalSubmit" />
+      <config projectName="tutorial" targetName="NightlyBuild" />
+      <config projectName="tutorial" targetName="mq_consumer" />
+      <config projectName="tutorial" targetName="NightlyCoverage" />
+      <config projectName="tutorial" targetName="ExperimentalStart" />
+      <config projectName="tutorial" targetName="tcp_server" />
+      <config projectName="tutorial" targetName="ExperimentalConfigure" />
+      <config projectName="tutorial" targetName="dbus_receiver" />
+      <config projectName="tutorial" targetName="ContinuousBuild" />
+      <config projectName="tutorial" targetName="NightlyMemoryCheck" />
+      <config projectName="tutorial" targetName="ExperimentalBuild" />
+      <config projectName="tutorial" targetName="ContinuousSubmit" />
       <config projectName="tutorial" targetName="semaphore" />
+      <config projectName="tutorial" targetName="ExperimentalMemCheck" />
+      <config projectName="tutorial" targetName="ContinuousUpdate" />
+      <config projectName="tutorial" targetName="NightlyMemCheck" />
+      <config projectName="tutorial" targetName="NightlyTest" />
+      <config projectName="tutorial" targetName="mq_producer" />
       <config projectName="tutorial" targetName="sock_server" />
+      <config projectName="tutorial" targetName="ContinuousMemCheck" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -47,9 +47,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="add unamed semaphore">
+    <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbus/receiver.c" beforeDir="false" afterPath="$PROJECT_DIR$/dbus/receiver.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbus/sender.c" beforeDir="false" afterPath="$PROJECT_DIR$/dbus/sender.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.dbus_receiver">
+  <component name="RunManager" selected="CMake Application.dbus_sender">
     <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -337,7 +336,10 @@
       <workItem from="1565078604570" duration="8920000" />
       <workItem from="1565091226235" duration="9524000" />
       <workItem from="1577782254998" duration="3426000" />
-      <workItem from="1577866869962" duration="13862000" />
+      <workItem from="1577866869962" duration="14499000" />
+      <workItem from="1578019117144" duration="699000" />
+      <workItem from="1578029795166" duration="1428000" />
+      <workItem from="1578041185676" duration="2569000" />
     </task>
     <task id="LOCAL-00001" summary="implement unix socket, message queue">
       <created>1565084819448</created>
@@ -381,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577873736903</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add dbus tutorial">
+      <created>1577966800282</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577966800282</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

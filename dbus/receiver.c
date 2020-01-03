@@ -9,6 +9,10 @@
 
 #include "dbus/dbus.h"
 
+#define DBUS_NAME "cn.wangdm.receiver"
+#define DBUS_PATH "/cn/wangdm/test"
+#define DBUS_IFACE "cn.wangdm.test"
+
 static dbus_bool_t dbus_add_handle(DBusWatch *watch, void *data) {
     printf("dbus_add_handle\n");
     return TRUE;
@@ -72,13 +76,13 @@ int main(int argc, char **argv) {
     const char *name = dbus_bus_get_unique_name(connection);
     printf("DBus connect success, name: %s\n", name);
 
-    ret = dbus_bus_request_name(connection, "dbus.receiver", DBUS_NAME_FLAG_REPLACE_EXISTING, &error);
+    ret = dbus_bus_request_name(connection, DBUS_NAME, DBUS_NAME_FLAG_REPLACE_EXISTING, &error);
     if (TRUE != ret) {
         printf("dbus_bus_request_name failed, name:%s, message:%s\n", error.name, error.message);
     }
 
     //dbus_bus_add_match(connection, "type='signal'", &error);
-    dbus_bus_add_match(connection, "type='signal',interface='cn.wangdm.dbus'", &error);
+    dbus_bus_add_match(connection, "type='signal',interface='"DBUS_IFACE"'", &error);
 
     dbus_connection_add_filter(connection, dbus_message_handle2, NULL, NULL);
     dbus_connection_add_filter(connection, dbus_message_handle1, NULL, NULL);
