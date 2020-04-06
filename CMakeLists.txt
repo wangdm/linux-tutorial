@@ -41,6 +41,10 @@ target_link_libraries(tcp_server uv pthread)
 add_executable(tcp_client libuv/tcp_client.c)
 target_link_libraries(tcp_client uv pthread)
 
+#uvc
+add_executable(uvc uvc/main.c)
+target_link_libraries(uvc jpeg)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

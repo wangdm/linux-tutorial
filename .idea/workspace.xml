@@ -2,43 +2,44 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="tutorial" targetName="ContinuousTest" />
-      <config projectName="tutorial" targetName="NightlyStart" />
-      <config projectName="tutorial" targetName="ContinuousConfigure" />
-      <config projectName="tutorial" targetName="NightlyUpdate" />
-      <config projectName="tutorial" targetName="NightlyConfigure" />
-      <config projectName="tutorial" targetName="tcp_client" />
-      <config projectName="tutorial" targetName="ContinuousStart" />
-      <config projectName="tutorial" targetName="ExperimentalCoverage" />
-      <config projectName="tutorial" targetName="ExperimentalUpdate" />
-      <config projectName="tutorial" targetName="Continuous" />
-      <config projectName="tutorial" targetName="sock_client" />
-      <config projectName="tutorial" targetName="NightlySubmit" />
-      <config projectName="tutorial" targetName="ContinuousCoverage" />
-      <config projectName="tutorial" targetName="Experimental" />
-      <config projectName="tutorial" targetName="ExperimentalTest" />
-      <config projectName="tutorial" targetName="Nightly" />
-      <config projectName="tutorial" targetName="dbus_sender" />
-      <config projectName="tutorial" targetName="ExperimentalSubmit" />
-      <config projectName="tutorial" targetName="NightlyBuild" />
-      <config projectName="tutorial" targetName="mq_consumer" />
-      <config projectName="tutorial" targetName="NightlyCoverage" />
-      <config projectName="tutorial" targetName="ExperimentalStart" />
-      <config projectName="tutorial" targetName="tcp_server" />
-      <config projectName="tutorial" targetName="ExperimentalConfigure" />
-      <config projectName="tutorial" targetName="dbus_receiver" />
-      <config projectName="tutorial" targetName="ContinuousBuild" />
-      <config projectName="tutorial" targetName="NightlyMemoryCheck" />
       <config projectName="tutorial" targetName="ExperimentalBuild" />
-      <config projectName="tutorial" targetName="ContinuousSubmit" />
-      <config projectName="tutorial" targetName="semaphore" />
-      <config projectName="tutorial" targetName="ExperimentalMemCheck" />
-      <config projectName="tutorial" targetName="ContinuousUpdate" />
       <config projectName="tutorial" targetName="NightlyMemCheck" />
-      <config projectName="tutorial" targetName="NightlyTest" />
-      <config projectName="tutorial" targetName="mq_producer" />
-      <config projectName="tutorial" targetName="sock_server" />
+      <config projectName="tutorial" targetName="NightlyCoverage" />
+      <config projectName="tutorial" targetName="sock_client" />
+      <config projectName="tutorial" targetName="ExperimentalConfigure" />
+      <config projectName="tutorial" targetName="ContinuousCoverage" />
+      <config projectName="tutorial" targetName="NightlySubmit" />
       <config projectName="tutorial" targetName="ContinuousMemCheck" />
+      <config projectName="tutorial" targetName="ExperimentalStart" />
+      <config projectName="tutorial" targetName="ContinuousUpdate" />
+      <config projectName="tutorial" targetName="dbus_receiver" />
+      <config projectName="tutorial" targetName="ContinuousStart" />
+      <config projectName="tutorial" targetName="mq_producer" />
+      <config projectName="tutorial" targetName="tcp_server" />
+      <config projectName="tutorial" targetName="ContinuousSubmit" />
+      <config projectName="tutorial" targetName="ContinuousTest" />
+      <config projectName="tutorial" targetName="Continuous" />
+      <config projectName="tutorial" targetName="ContinuousConfigure" />
+      <config projectName="tutorial" targetName="ExperimentalMemCheck" />
+      <config projectName="tutorial" targetName="NightlyMemoryCheck" />
+      <config projectName="tutorial" targetName="ExperimentalCoverage" />
+      <config projectName="tutorial" targetName="Experimental" />
+      <config projectName="tutorial" targetName="uvc" />
+      <config projectName="tutorial" targetName="Nightly" />
+      <config projectName="tutorial" targetName="mq_consumer" />
+      <config projectName="tutorial" targetName="NightlyUpdate" />
+      <config projectName="tutorial" targetName="dbus_sender" />
+      <config projectName="tutorial" targetName="NightlyStart" />
+      <config projectName="tutorial" targetName="tcp_client" />
+      <config projectName="tutorial" targetName="ExperimentalUpdate" />
+      <config projectName="tutorial" targetName="NightlyBuild" />
+      <config projectName="tutorial" targetName="NightlyConfigure" />
+      <config projectName="tutorial" targetName="ContinuousBuild" />
+      <config projectName="tutorial" targetName="NightlyTest" />
+      <config projectName="tutorial" targetName="ExperimentalTest" />
+      <config projectName="tutorial" targetName="ExperimentalSubmit" />
+      <config projectName="tutorial" targetName="semaphore" />
+      <config projectName="tutorial" targetName="sock_server" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -48,10 +49,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/include/jconfig.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/jerror.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/jmorecfg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/jpeglib.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/libjpeg.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uvc/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbus/sender.c" beforeDir="false" afterPath="$PROJECT_DIR$/dbus/sender.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,34 +75,28 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/library" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/include" />
-      <recent name="$PROJECT_DIR$/library" />
-      <recent name="$PROJECT_DIR$/libuv" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ipc" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/library" />
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/libuv" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="CMake Application.dbus_sender">
+  <component name="RunManager" selected="CMake Application.uvc">
     <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -282,6 +282,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="uvc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="uvc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="uvc">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="CMake Application.Continuous" />
       <item itemvalue="CMake Application.ContinuousBuild" />
@@ -320,7 +325,20 @@
       <item itemvalue="CMake Application.sock_server" />
       <item itemvalue="CMake Application.tcp_client" />
       <item itemvalue="CMake Application.tcp_server" />
+      <item itemvalue="CMake Application.uvc" />
     </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -340,6 +358,7 @@
       <workItem from="1578019117144" duration="699000" />
       <workItem from="1578029795166" duration="1428000" />
       <workItem from="1578041185676" duration="2569000" />
+      <workItem from="1586156576594" duration="2301000" />
     </task>
     <task id="LOCAL-00001" summary="implement unix socket, message queue">
       <created>1565084819448</created>
@@ -417,5 +436,43 @@
     <MESSAGE value="add unamed semaphore" />
     <MESSAGE value="add dbus tutorial" />
     <option name="LAST_COMMIT_MESSAGE" value="add dbus tutorial" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="426" height="466" key="DebuggerActiveHint" timestamp="1586157086826">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="426" height="466" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1586157086826" />
+    <state width="1807" height="334" key="GridCell.Tab.0.bottom" timestamp="1586189835670">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835670" />
+    <state width="1807" height="334" key="GridCell.Tab.0.center" timestamp="1586189835668">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835668" />
+    <state width="1807" height="334" key="GridCell.Tab.0.left" timestamp="1586189835667">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835667" />
+    <state width="1807" height="334" key="GridCell.Tab.0.right" timestamp="1586189835669">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835669" />
+    <state width="1807" height="334" key="GridCell.Tab.1.bottom" timestamp="1586189835672">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835672" />
+    <state width="1807" height="334" key="GridCell.Tab.1.center" timestamp="1586189835671">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835671" />
+    <state width="1807" height="334" key="GridCell.Tab.1.left" timestamp="1586189835671">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835671" />
+    <state width="1807" height="334" key="GridCell.Tab.1.right" timestamp="1586189835672">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835672" />
   </component>
 </project>
