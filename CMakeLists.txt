@@ -31,10 +31,6 @@ target_link_libraries(sock_client ${mq_lib})
 add_executable(sock_server ipc/sock_server.c)
 target_link_libraries(sock_server ${mq_lib})
 
-#sync
-add_executable(file_lock sync/file_lock.c)
-target_link_libraries(file_lock ${mq_lib})
-
 #dbus
 add_executable(dbus_sender dbus/sender.c)
 target_link_libraries(dbus_sender dbus pthread)

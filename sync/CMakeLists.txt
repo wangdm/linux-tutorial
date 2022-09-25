@@ -1,5 +1,5 @@
 
 set(lib rt pthread)
 
-add_executable(flock file_lock.c)
-target_link_libraries(flock ${lib})
+add_executable(file_lock file_lock.c)
+target_link_libraries(file_lock ${lib})

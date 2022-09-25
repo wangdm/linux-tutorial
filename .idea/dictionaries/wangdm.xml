@@ -3,8 +3,10 @@
     <words>
       <w>msleep</w>
       <w>recv</w>
+      <w>rlock</w>
       <w>rsize</w>
       <w>wangdm</w>
+      <w>wlock</w>
       <w>wsize</w>
     </words>
   </dictionary>

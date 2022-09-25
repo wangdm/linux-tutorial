@@ -3,94 +3,98 @@
 **/
 
 #include <string.h>
+#include <fcntl.h>
 #include <errno.h>
 #include <signal.h>
 #include <unistd.h>
-
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
+#include <sys/mman.h>
 
 #include "log.h"
 
 #define msleep(ms) usleep((ms)*1000)
 
-#define SERVER_HOST "0.0.0.0"
-#define SERVER_PORT 5566
+#define USE_SHM 1
+#if USE_SHM
+#define LOCK_SHM "shm_lock"
+#else
+#define LOCK_FILE_PATH PROJECT_SOURCE_ROOT"/data/"
+#define LOCK_FILE LOCK_FILE_PATH"file.lck"
+#endif
 
 static int g_app_quit = 0;
 
-static void process_server() {
-
-    struct sockaddr_in server_addr;
-    struct sockaddr_in client_addr;
-
-    int server_fd = socket(AF_INET, SOCK_STREAM, 0);
-
-    memset(&server_addr, 0, sizeof(server_addr));
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_addr.s_addr = inet_addr(SERVER_HOST);
-    server_addr.sin_port = htons(SERVER_PORT);
-
-    if (bind(server_fd, (struct sockaddr *) &server_addr, sizeof(server_addr)) != 0) {
-        LOG_ERROR("server bind failed with [%d]%s", errno, strerror(errno));
-        close(server_fd);
-        return;
+static int file_wlock(int fd) {
+    struct flock lock;
+    lock.l_type = F_WRLCK;
+    lock.l_whence = SEEK_SET;
+    lock.l_start = 0;
+    lock.l_len = 0;
+    lock.l_pid = getpid();
+    int ret = fcntl(fd, F_SETLKW, &lock);
+    if (ret == -1) {
+        LOG_ERROR("fcntl failed with [%d]%s", errno, strerror(errno));
+        return -1;
     }
-
-    if (listen(server_fd, 8) != 0) {
-        LOG_ERROR("server listen failed with [%d]%s", errno, strerror(errno));
-        close(server_fd);
-        return;
-    }
-    LOG_INFO("server listen on %s:%d ...", SERVER_HOST, SERVER_PORT);
-
-    for (;;) {
-        if (g_app_quit) {
-            break;
-        }
-
-        socklen_t addr_len = sizeof(client_addr);
-        int client_fd = accept(server_fd, (struct sockaddr *) &client_addr, &addr_len);
-        if (0 < client_fd) {
-            LOG_INFO("client connected from %s", inet_ntoa(client_addr.sin_addr));
-            close(client_fd);
-        } else {
-            LOG_ERROR("server accept failed with [%d]%s", errno, strerror(errno));
-        }
-
-        msleep(30);
-    }
-
-    close(server_fd);
+    return 0;
 }
 
-static void process_client() {
-
-    /// wait server
-    sleep(1);
-
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
-
-    struct sockaddr_in server_addr;
-    memset(&server_addr, 0, sizeof(server_addr));
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_addr.s_addr = inet_addr(SERVER_HOST);
-    server_addr.sin_port = htons(SERVER_PORT);
-
-    if (connect(sock, (struct sockaddr *) &server_addr, sizeof(server_addr)) != 0) {
-        LOG_ERROR("connect failed with [%d]%s", errno, strerror(errno));
-        close(sock);
-        return;
+static int file_rlock(int fd) {
+    struct flock lock;
+    lock.l_type = F_RDLCK;
+    lock.l_whence = SEEK_SET;
+    lock.l_start = 0;
+    lock.l_len = 0;
+    lock.l_pid = getpid();
+    int ret = fcntl(fd, F_SETLKW, &lock);
+    if (ret == -1) {
+        LOG_ERROR("fcntl failed with [%d]%s", errno, strerror(errno));
+        return -1;
     }
+    return 0;
+}
+
+static int file_unlock(int fd) {
+    struct flock lock;
+    lock.l_type = F_UNLCK;
+    lock.l_whence = SEEK_SET;
+    lock.l_start = 0;
+    lock.l_len = 0;
+    lock.l_pid = getpid();
+    int ret = fcntl(fd, F_SETLKW, &lock);
+    if (ret == -1) {
+        LOG_ERROR("fcntl failed with [%d]%s", errno, strerror(errno));
+        return -1;
+    }
+    return 0;
+}
+
+static void process_write(int fd) {
+    for (;;) {
+        if (g_app_quit) {
+            break;
+        }
+        if (file_wlock(fd) == 0) {
+            LOG_INFO("get write lock");
+            sleep(2);
+            file_unlock(fd);
+        }
+        msleep(30);
+    }
+}
+
+static void process_read(int fd) {
 
     for (;;) {
         if (g_app_quit) {
             break;
         }
+        if (file_rlock(fd) == 0) {
+            LOG_INFO("get read lock");
+            sleep(2);
+            file_unlock(fd);
+        }
         msleep(30);
     }
-    close(sock);
 }
 
 static void handle_signal(int signum) {
@@ -119,16 +123,33 @@ static void register_signal() {
 int main() {
     register_signal();
 
+#if USE_SHM
+    int fd = shm_open(LOCK_SHM, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+#else
+    int fd = open(LOCK_FILE, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+#endif
+    if (fd < 0) {
+        LOG_FATAL("open lock file failed with [%d]%s", errno, strerror(errno));
+        return -1;
+    }
+
     pid_t pid = fork();
     if (pid == -1) {
         LOG_FATAL("linux fork process failed with [%d]%s", errno, strerror(errno));
         return -1;
     } else if (pid == 0) {
         /// father process
-        process_server();
+        process_write(fd);
     } else {
         /// child process
-        process_client();
+        process_read(fd);
     }
+
+    close(fd);
+#if USE_SHM
+    shm_unlink(LOCK_SHM);
+#else
+    unlink(LOCK_FILE);
+#endif
     return 0;
 }
