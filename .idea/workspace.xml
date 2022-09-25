@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="tutorial" targetName="ExperimentalBuild" />
       <config projectName="tutorial" targetName="NightlyMemCheck" />
+      <config projectName="tutorial" targetName="tls_client" />
       <config projectName="tutorial" targetName="NightlyCoverage" />
+      <config projectName="tutorial" targetName="flock" />
       <config projectName="tutorial" targetName="sock_client" />
       <config projectName="tutorial" targetName="ExperimentalConfigure" />
       <config projectName="tutorial" targetName="ContinuousCoverage" />
@@ -15,7 +23,9 @@
       <config projectName="tutorial" targetName="dbus_receiver" />
       <config projectName="tutorial" targetName="ContinuousStart" />
       <config projectName="tutorial" targetName="mq_producer" />
+      <config projectName="tutorial" targetName="file_lock" />
       <config projectName="tutorial" targetName="tcp_server" />
+      <config projectName="tutorial" targetName="uv_tcp_server" />
       <config projectName="tutorial" targetName="ContinuousSubmit" />
       <config projectName="tutorial" targetName="ContinuousTest" />
       <config projectName="tutorial" targetName="Continuous" />
@@ -30,11 +40,13 @@
       <config projectName="tutorial" targetName="NightlyUpdate" />
       <config projectName="tutorial" targetName="dbus_sender" />
       <config projectName="tutorial" targetName="NightlyStart" />
+      <config projectName="tutorial" targetName="uv_tcp_client" />
       <config projectName="tutorial" targetName="tcp_client" />
       <config projectName="tutorial" targetName="ExperimentalUpdate" />
       <config projectName="tutorial" targetName="NightlyBuild" />
       <config projectName="tutorial" targetName="NightlyConfigure" />
       <config projectName="tutorial" targetName="ContinuousBuild" />
+      <config projectName="tutorial" targetName="tls_server" />
       <config projectName="tutorial" targetName="NightlyTest" />
       <config projectName="tutorial" targetName="ExperimentalTest" />
       <config projectName="tutorial" targetName="ExperimentalSubmit" />
@@ -44,19 +56,162 @@
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" ENABLED="true" GENERATION_DIR="build" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/jconfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/jerror.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/jmorecfg.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/jpeglib.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/libjpeg.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uvc/main.c" afterDir="false" />
+    <list default="true" id="e15dcb63-480d-4aa6-920c-0b9f043a1257" name="Default Changelist" comment="update project file">
+      <change afterPath="$PROJECT_DIR$/include/log.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/aes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/asn1.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/asn1_mac.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/asn1err.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/asn1t.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/async.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/asyncerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/bio.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/bioerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/blowfish.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/bn.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/bnerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/buffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/buffererr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/camellia.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cast.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cmac.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cmp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cmp_util.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cmperr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cms.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cmserr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/comp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/comperr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/conf.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/conf_api.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/conferr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/configuration.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/conftypes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/core.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/core_dispatch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/core_names.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/core_object.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/crmf.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/crmferr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/crypto.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cryptoerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cryptoerr_legacy.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ct.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/cterr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/decoder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/decodererr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/des.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/dh.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/dherr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/dsa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/dsaerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/dtls1.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/e_os2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ebcdic.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ec.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ecdh.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ecdsa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ecerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/encoder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/encodererr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/engine.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/engineerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/err.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ess.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/esserr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/evp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/evperr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/fips_names.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/fipskey.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/hmac.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/http.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/httperr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/idea.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/kdf.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/kdferr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/lhash.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/macros.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/md2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/md4.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/md5.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/mdc2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/modes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/obj_mac.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/objects.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/objectserr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ocsp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ocsperr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/opensslconf.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/opensslv.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ossl_typ.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/param_build.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/params.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/pem.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/pem2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/pemerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/pkcs12.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/pkcs12err.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/pkcs7.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/pkcs7err.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/prov_ssl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/proverr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/provider.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/rand.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/randerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/rc2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/rc4.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/rc5.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ripemd.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/rsa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/rsaerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/safestack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/seed.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/self_test.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/sha.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/srp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/srtp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ssl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ssl2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ssl3.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/sslerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/sslerr_legacy.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/stack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/store.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/storeerr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/symhacks.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/tls1.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/trace.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ts.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/tserr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/txt_db.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/types.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/ui.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/uierr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/whrlpool.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/x509.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/x509_vfy.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/x509err.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/x509v3.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/openssl/x509v3err.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/libcrypto.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/libssl.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libuv/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/net/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/net/tcp_client.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/net/tcp_server.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/net/tls_client.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/net/tls_server.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sync/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sync/file_lock.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/wangdm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/wangdm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ipc/sock_client.c" beforeDir="false" afterPath="$PROJECT_DIR$/ipc/sock_client.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ipc/sock_server.c" beforeDir="false" afterPath="$PROJECT_DIR$/ipc/sock_server.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +222,25 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/wangdm/linux-tutorial.git" />
+      </set>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1P1vge8cm9IJFUdCTy0EYcIwW5t" />
@@ -77,255 +249,135 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/library" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/mnt/disk/Workspace/tutorial/linux-tutorial/include",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/library" />
+      <recent name="$PROJECT_DIR$/net" />
+      <recent name="$PROJECT_DIR$/libuv" />
+      <recent name="$PROJECT_DIR$/sync" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ipc" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/library" />
-      <recent name="$PROJECT_DIR$/include" />
-      <recent name="$PROJECT_DIR$/libuv" />
-    </key>
   </component>
-  <component name="RunManager" selected="CMake Application.uvc">
-    <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
+  <component name="RunManager" selected="CMake Application.tls_server">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContinuousBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ContinuousBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ContinuousBuild">
+    <configuration name="dbus_receiver" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="dbus_receiver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="dbus_receiver">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContinuousConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ContinuousConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ContinuousConfigure">
+    <configuration name="dbus_sender" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="dbus_sender" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="dbus_sender">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContinuousCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ContinuousCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ContinuousCoverage">
+    <configuration name="file_lock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="file_lock" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="file_lock">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContinuousMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ContinuousMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ContinuousMemCheck">
+    <configuration name="flock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="flock" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="flock">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContinuousStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ContinuousStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ContinuousStart">
+    <configuration name="mq_consumer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="mq_consumer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="mq_consumer">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContinuousSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ContinuousSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ContinuousSubmit">
+    <configuration name="mq_producer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="mq_producer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="mq_producer">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContinuousTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ContinuousTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ContinuousTest">
+    <configuration name="semaphore" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="semaphore" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="semaphore">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContinuousUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ContinuousUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ContinuousUpdate">
+    <configuration name="sock_client" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="sock_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="sock_client">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Experimental" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="Experimental" CONFIG_NAME="Debug">
+    <configuration name="sock_server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="sock_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="sock_server">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExperimentalBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ExperimentalBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ExperimentalBuild">
+    <configuration name="tcp_client" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="tcp_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="tcp_client">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExperimentalConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ExperimentalConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ExperimentalConfigure">
+    <configuration name="tcp_server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="tcp_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="tcp_server">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExperimentalCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ExperimentalCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ExperimentalCoverage">
+    <configuration name="tls_client" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="tls_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="tls_client">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExperimentalMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ExperimentalMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ExperimentalMemCheck">
+    <configuration name="tls_server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="tls_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="tls_server">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExperimentalStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ExperimentalStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ExperimentalStart">
+    <configuration name="uv_tcp_client" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="uv_tcp_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="uv_tcp_client">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExperimentalSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ExperimentalSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ExperimentalSubmit">
+    <configuration name="uv_tcp_server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="uv_tcp_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="uv_tcp_server">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExperimentalTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ExperimentalTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ExperimentalTest">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExperimentalUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="ExperimentalUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="ExperimentalUpdate">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Nightly" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="Nightly" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlyBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlyBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlyBuild">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlyConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlyConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlyConfigure">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlyCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlyCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlyCoverage">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlyMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlyMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlyMemCheck">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlyMemoryCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlyMemoryCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlyMemoryCheck">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlyStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlyStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlyStart">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlySubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlySubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlySubmit">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlyTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlyTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlyTest">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NightlyUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="NightlyUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="NightlyUpdate">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="dbus_receiver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="dbus_receiver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="dbus_receiver">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="dbus_sender" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="dbus_sender" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="dbus_sender">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mq_consumer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="mq_consumer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="mq_consumer">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mq_producer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="mq_producer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="mq_producer">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="semaphore" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="semaphore" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="semaphore">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="sock_client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="sock_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="sock_client">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="sock_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="sock_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="sock_server">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="tcp_client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="tcp_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="tcp_client">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="tcp_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="tcp_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="tcp_server">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="uvc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="uvc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="uvc">
+    <configuration name="uvc" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tutorial" TARGET_NAME="uvc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tutorial" RUN_TARGET_NAME="uvc">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.Continuous" />
-      <item itemvalue="CMake Application.ContinuousBuild" />
-      <item itemvalue="CMake Application.ContinuousConfigure" />
-      <item itemvalue="CMake Application.ContinuousCoverage" />
-      <item itemvalue="CMake Application.ContinuousMemCheck" />
-      <item itemvalue="CMake Application.ContinuousStart" />
-      <item itemvalue="CMake Application.ContinuousSubmit" />
-      <item itemvalue="CMake Application.ContinuousTest" />
-      <item itemvalue="CMake Application.ContinuousUpdate" />
       <item itemvalue="CMake Application.dbus_receiver" />
       <item itemvalue="CMake Application.dbus_sender" />
-      <item itemvalue="CMake Application.Experimental" />
-      <item itemvalue="CMake Application.ExperimentalBuild" />
-      <item itemvalue="CMake Application.ExperimentalConfigure" />
-      <item itemvalue="CMake Application.ExperimentalCoverage" />
-      <item itemvalue="CMake Application.ExperimentalMemCheck" />
-      <item itemvalue="CMake Application.ExperimentalStart" />
-      <item itemvalue="CMake Application.ExperimentalSubmit" />
-      <item itemvalue="CMake Application.ExperimentalTest" />
-      <item itemvalue="CMake Application.ExperimentalUpdate" />
+      <item itemvalue="CMake Application.file_lock" />
       <item itemvalue="CMake Application.mq_consumer" />
       <item itemvalue="CMake Application.mq_producer" />
-      <item itemvalue="CMake Application.Nightly" />
-      <item itemvalue="CMake Application.NightlyBuild" />
-      <item itemvalue="CMake Application.NightlyConfigure" />
-      <item itemvalue="CMake Application.NightlyCoverage" />
-      <item itemvalue="CMake Application.NightlyMemCheck" />
-      <item itemvalue="CMake Application.NightlyMemoryCheck" />
-      <item itemvalue="CMake Application.NightlyStart" />
-      <item itemvalue="CMake Application.NightlySubmit" />
-      <item itemvalue="CMake Application.NightlyTest" />
-      <item itemvalue="CMake Application.NightlyUpdate" />
       <item itemvalue="CMake Application.semaphore" />
       <item itemvalue="CMake Application.sock_client" />
       <item itemvalue="CMake Application.sock_server" />
+      <item itemvalue="CMake Application.uvc" />
+      <item itemvalue="CMake Application.uv_tcp_client" />
+      <item itemvalue="CMake Application.uv_tcp_server" />
       <item itemvalue="CMake Application.tcp_client" />
       <item itemvalue="CMake Application.tcp_server" />
-      <item itemvalue="CMake Application.uvc" />
+      <item itemvalue="CMake Application.tls_client" />
+      <item itemvalue="CMake Application.tls_server" />
+      <item itemvalue="CMake Application.flock" />
     </list>
   </component>
   <component name="ServiceViewManager">
@@ -340,6 +392,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -358,7 +411,16 @@
       <workItem from="1578019117144" duration="699000" />
       <workItem from="1578029795166" duration="1428000" />
       <workItem from="1578041185676" duration="2569000" />
-      <workItem from="1586156576594" duration="2301000" />
+      <workItem from="1586156576594" duration="2750000" />
+      <workItem from="1663120484150" duration="12877000" />
+      <workItem from="1663465577806" duration="605000" />
+      <workItem from="1663477077187" duration="618000" />
+      <workItem from="1664000891162" duration="3812000" />
+      <workItem from="1664004766753" duration="2000" />
+      <workItem from="1664031855759" duration="2131000" />
+      <workItem from="1664036054290" duration="1839000" />
+      <workItem from="1664076758054" duration="4538000" />
+      <workItem from="1664099077287" duration="3726000" />
     </task>
     <task id="LOCAL-00001" summary="implement unix socket, message queue">
       <created>1565084819448</created>
@@ -409,74 +471,45 @@
       <option name="project" value="LOCAL" />
       <updated>1577966800282</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add uvc tutorial">
+      <created>1586189846774</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586189846774</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update project file">
+      <created>1586189889666</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586189889666</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="implement unix socket, message queue" />
     <MESSAGE value="add libuv include file and library to project" />
     <MESSAGE value="add unamed semaphore" />
     <MESSAGE value="add dbus tutorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dbus tutorial" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1586189846684">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1586189846684" />
-    <state width="426" height="466" key="DebuggerActiveHint" timestamp="1586157086826">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="426" height="466" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1586157086826" />
-    <state width="1807" height="334" key="GridCell.Tab.0.bottom" timestamp="1586189835670">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="334" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835670" />
-    <state width="1807" height="334" key="GridCell.Tab.0.center" timestamp="1586189835668">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="334" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835668" />
-    <state width="1807" height="334" key="GridCell.Tab.0.left" timestamp="1586189835667">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="334" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835667" />
-    <state width="1807" height="334" key="GridCell.Tab.0.right" timestamp="1586189835669">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="334" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835669" />
-    <state width="1807" height="334" key="GridCell.Tab.1.bottom" timestamp="1586189835672">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="334" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835672" />
-    <state width="1807" height="334" key="GridCell.Tab.1.center" timestamp="1586189835671">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="334" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835671" />
-    <state width="1807" height="334" key="GridCell.Tab.1.left" timestamp="1586189835671">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="334" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835671" />
-    <state width="1807" height="334" key="GridCell.Tab.1.right" timestamp="1586189835672">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="334" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1586189835672" />
+    <MESSAGE value="add uvc tutorial" />
+    <MESSAGE value="update project file" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project file" />
   </component>
 </project>
